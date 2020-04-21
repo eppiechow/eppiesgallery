@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background-color: #FFF3DD;
+}
+
+ p {
+  font-size: 15px;
+
+ }
+
+.para{
+   text-align: justify;
+}
+
+
+ #wrapper {
+
+  
+  width: 90%; 
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  /*box-shadow: 3px 3px 3px 3px #808080;*/
+}
+
+.footer {
+   padding: 50px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-image: url(c20.jpg);
+color: white;
+   text-align: center;
+}
+/* Style the header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background-color: #BFB79D;
+  color: white;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #b87f69;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a, .dropdown-btn {
+
+  transition: 0.3s;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #e7ddc3;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 59%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.active {
+  background-color: #00a2b8;
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #00a2b8;
+  padding-left: 8px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.barstart{
+position: fixed;
+top: 0%;
+left: 0%;
+}
+
+ .head {
+position: fixed;
+top: 12%;
+right: 3%;
+width: 60px;
+height: 175px;
+border: 16px double #df0101;
+border-radius: 30px 0px 30px 0px;
+display: flex;
+justify-content: left;
+align-items: center;
+text-align:left;
+font-family: 'Bangers', cursive;
+font-size: 2.5em;
+color: #df0101;
+background-color: #FFFCC2;
+}
+
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+
+}
+.media {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+img{
+ opacity: 0.7; 
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="1am.html">About ME</a>
+  <a href="6art.html">Artist Statement</a>
+  <button class="dropdown-btn">Gallery 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="2img.html">Images</a>
+    <a href="7draw.html">Drawing</a>
+    <a href="3cod.html">Code Art</a>
+    <a href="4vid.html">Videos</a>
+    <a href="5web.html">Websites</a>
+  </div>
+</div>
+
+<div class="barstart">
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="map3.png" alt="map"></span>
+</div>
+</div>
+
+<div class="header">
+  <h1>IMAGES</h1>
+</div>
+
+ <div class="head">
+<a href="index.html"><b>E<br>&nbsp;W</b></a>
+ </div>
+
+<div id="wrapper">
+<!--1st row-->
+<div class="row">
+  <div class="column">
+    <div class="media">
+     <img style="border: 12px inset #FFFFFF;" src="ypc_i1+2.jpg" alt="ai"  width="320" >
+    </div>
+    <div class="content">
+    <h2>Moons | ai</h2>
+    <p>Using different color to express the concept of moon.</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="media">
+      <img style="border: 12px inset #A3BFA4;" src="ypc_i3.jpg" alt="ai" width="320" >
+    </div>
+    <div class="content">
+    <h2>Silk | ai</h2>
+    <p>Resembling the texture of silk with curve.</p>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="media">
+      <img style="border: 12px inset #FFFFFF;" src="ypc_i4.jpg" alt="ai" width="320" >
+    </div>
+    <div class="content">
+    <h2>Butterfly | ai</h2>
+    <p>Using layers to show the shape and motion of a butterfly.</p>
+    </div>
+  </div>
+</div>
+
+<!--2st row-->
+<div class="row">
+  <div class="column">
+    <div class="media">
+     <img style="border: 12px inset #A3BFA4;" src="ypc_g1+2.jpg" alt="glitch" width="320">
+    </div>
+    <div class="content">
+    <h2>Virtual nature | sublime</h2>
+    <p>Resembling the texture of silk with curve.</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="media">
+      <img style="border: 12px inset #FFFFFF;" src="ypc_g3+4.jpg" alt="glitch" width="320">
+    </div>
+    <div class="content">
+    <h2>The collapse of utopia | sublime & audacity</h2>
+    <p>The artificial fake illusion comes to its end.</p>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="media">
+      <img style="border: 12px inset #A3BFA4;" src="ypc_g5.jpg" alt="glitch" width="320">
+    </div>
+    <div class="content">
+    <h2>Play blind | ai & audacity</h2>
+    <p>Play blind to reality and live in your own utopia.</p>
+    </div>
+  </div>
+</div>
+
+<!--3rd row-->
+<div class="row">
+  <div class="column">
+    <div class="media">
+     
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="media">
+      <img style="border: 12px inset #A3BFA4;" src="ypc_3d.jpg" alt="glitch" width="320">
+    </div>
+    <div class="content">
+    <h2>Dogbit | meshmixer</h2>
+    <div class="para"> 
+    <p>Inspired by high fantasy movies, I tried to create 3D model of animal that does not exist basing on the existing species. And then I combined rabbit, dog and sphere to make a model of new species “dogbit”. 
+      <br><a href=" https://skfb.ly/6RLJG" target="blank">Link to model</a></p></div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="media">
+         </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+</script>
+
+</body>
+</html>

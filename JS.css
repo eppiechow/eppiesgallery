@@ -1,0 +1,43 @@
+var img;
+var alphaC;
+var layer;
+var rad = 20;
+var w = 300, h = 470;
+var mouseIsDragged = false;
+
+function preload(){
+img = loadImage('bunny.jpg');
+
+}
+
+function setup() {
+  createCanvas(300, 470);
+  .parent("container");
+  layer = createGraphics(w, h);
+  layer.fill("white");
+  layer.rect(0,0,width,height);
+  
+}
+ 
+function draw() {
+  noStroke();
+  background(img);
+  image(layer, 0, 0);
+  
+  if (mouseIsPressed) {
+    noFill();
+    ellipse(mouseX, mouseY, rad*2, rad*2);
+  }
+  
+}
+
+function mouseDragged() {
+  for (var x = mouseX - rad; x < mouseX+rad; x++) {
+    for (var y = mouseY - rad; y < mouseY+rad; y++) {
+      if ((dist(x,y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
+        layer.set(x,y,alphaC); // https://p5js.org/reference/#/p5/set
+      }
+    }
+  }
+  layer.updatePixels();
+}

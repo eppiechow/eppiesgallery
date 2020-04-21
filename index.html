@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+ <div class="head">
+<a href="index.html"><b>E<br>&nbsp;W</b></a>
+ </div>
+
+<!--frame-->
+
+  <div class="border">
+    <div class="frame">
+        <div class="canvas" id="container">
+        <iframe src="https://editor.p5js.org/EPPIC/embed/Mt3L5S-Ja"></iframe>
+        </div>
+    </div>
+  </div>
+  <div class="callback">
+      Yim Ping Chow | <i> ME </i> | P5 
+  </div>
+
+<!--man-->
+  <div class="man">
+    <img src="man1.png" alt="man">
+  </div>
+ 
+
+
+
+
+<!--bar-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="1am.html">About ME</a>
+  <a href="6art.html">Artist Statement</a>
+  <button class="dropdown-btn">Gallery 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="2img.html">Images</a>
+    <a href="7draw.html">Drawing</a>
+    <a href="3cod.html">Code Art</a>
+    <a href="4vid.html">Videos</a>
+    <a href="5web.html">Websites</a>
+  </div>
+</div>
+
+
+
+<div class="barstart">
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="map3.png" alt="map"></span>
+</div>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+</script>
+
+
+
+</body>
+</html>

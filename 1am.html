@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="code.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+
+<style>
+body {
+  margin: 0;
+  background-color: #A7CBF2;
+}
+
+.border {
+  box-sizing: border-box;
+  position: relative;
+  background: yellow;
+  
+  padding: 20px;
+  box-shadow: 
+    -1px 1px var(--blur) 1px rgba(0, 0, 0, 0.1), 
+    -2px 2px var(--blur) 1px rgba(0, 0, 0, 0.09), 
+    -3px 3px var(--blur) 1px rgba(0, 0, 0, 0.08), 
+    -4px 4px var(--blur) 1px rgba(0, 0, 0, 0.07), 
+    -5px 5px var(--blur) 1px rgba(0, 0, 0, 0.06), 
+    -6px 6px var(--blur) 1px rgba(0, 0, 0, 0.05), 
+    -7px 7px var(--blur) 1px rgba(0, 0, 0, 0.04), 
+    -8px 8px var(--blur) 1px rgba(0, 0, 0, 0.03), 
+    -9px 9px var(--blur) 1px rgba(0, 0, 0, 0.03), 
+    -10px 10px var(--blur) 1px rgba(0, 0, 0, 0.03), 
+    -11px 11px var(--blur) 1px rgba(0, 0, 0, 0.03), 
+    -12px 12px var(--blur) 1px rgba(0, 0, 0, 0.02), 
+    -13px 13px var(--blur) 1px rgba(0, 0, 0, 0.02), 
+    -14px 14px var(--blur) 1px rgba(0, 0, 0, 0.01), 
+    -15px 15px var(--blur) 1px rgba(0, 0, 0, 0.01), 
+    -16px 16px var(--blur) 1px rgba(0, 0, 0, 0.01);
+    &:before{
+    content: ' ';
+    display: block;
+    padding-bottom: 100%
+    }}
+
+ .canvas {
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center center;
+} 
+
+
+
+ p {
+  font-size: 17px;
+ }
+
+/*table;*/
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+ #wrapper {
+  width: 90%; 
+  margin-top: 1%;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  /*box-shadow: 3px 3px 3px 3px #808080;*/
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+
+
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: center;
+  color: white;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+   padding: 50px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-image: url(c102.jpg);
+   background-size: cover;
+   text-align: center;
+   position: fixed
+}
+
+ .head {
+position: fixed;
+top: 12%;
+right: 3%;
+width: 60px;
+height: 175px;
+border: 16px double #df0101;
+border-radius: 30px 0px 30px 0px;
+display: flex;
+justify-content: left;
+align-items: center;
+text-align:left;
+font-family: 'Bangers', cursive;
+font-size: 2.5em;
+color: #df0101;
+background-color: #FFFCC2;
+}
+
+.man1 {
+  position: fixed;
+  top: 60.5%;
+  left: 10%;
+  width: 150px;
+  height: 75px;
+
+ }
+
+.man2 {
+  position: fixed;
+  top: 59.5%;
+  right: 8%;
+  width: 150px;
+  height: 75px;
+ }
+
+/*navbar*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #b87f69;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a, .dropdown-btn {
+
+  transition: 0.3s;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #e7ddc3;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 59%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.active {
+  background-color: #00a2b8;
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #00a2b8;
+  padding-left: 8px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.barstart{
+position: fixed;
+top: 0%;
+left: 0%;
+}
+
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+body {
+  font-family: 'Crimson Text', serif}</style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="1am.html">About ME</a>
+  <a href="6art.html">Artist Statement</a>
+  <button class="dropdown-btn">Gallery 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="2img.html">Images</a>
+    <a href="5web.html">Drawing</a>
+    <a href="3cod.html">Code Art</a>
+    <a href="4vid.html">Videos</a>
+    <a href="5web.html">Websites</a>
+  </div>
+</div>
+
+<div class="barstart">
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="map3.png" alt="map"></span>
+</div>
+</div>
+
+<div class="header">
+  <h1>EPPIE</h1>
+</div>
+
+ <div class="head">
+<a href="index.html"><b>E<br>&nbsp;W</b></a>
+ </div>
+
+<div id="wrapper">
+
+<!--1st row-->
+<div class="row">
+  <div class="column">
+    <div class="media">
+
+      <div class="border">
+        <div class="frame">
+         <div class="canvas" id="container">
+        <img src="ome.png" alt="self-protrait">
+            <h3>Eppie Chow</h3>
+    <p>New to digital media, I explore different software to create my artwotks.<br>
+    Linkdin: game.epchow@gmail.com</p>
+         </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+  <div class="man1">
+    <img src="man1.png" alt="man">
+  </div>
+
+  <div class="man2">
+    <img src="man2.png" alt="man">
+  </div>
+
+
+
+<div class="footer">
+</div>
+
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+</script>
+
+</body>
+</html>
